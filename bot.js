@@ -1,6 +1,6 @@
 ﻿const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "$";
+const prefix = "^";
 
 
 
@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Brodcast Bot ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`GangCity`,"http://twitch.tv/over_powerx")
+client.user.setGame(`Narcos City`,"http://twitch.tv/mloook")
 client.user.setStatus("dnd")
 });
 
@@ -22,7 +22,7 @@ client.on("message", async message => {
     command = command.slice(prefix.length);
         if(!message.channel.guild) return;
             var args = message.content.split(" ").slice(1).join(" ");
-            if(command == "gcsw7") {
+            if(command == "bc") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
                     return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
                 }
